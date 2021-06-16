@@ -11,7 +11,7 @@ namespace stars
     /// </summary>
     struct Star
     {
-        public int N { get; set; }
+        public int N;
         private const double pi = Math.PI;
 
         /// <summary>
@@ -83,6 +83,8 @@ namespace stars
         /// </summary>
         public void Compute()
         {
+            N = 100;
+
             Compute_Rad();
 
             Compute_xyz();
@@ -323,7 +325,6 @@ namespace stars
 
                     #region Write to Struct
 
-                    stars[i].N = N;
                     stars[i].Name = Name;
                     stars[i].Num = num;
 
